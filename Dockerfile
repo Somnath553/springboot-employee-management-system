@@ -14,4 +14,4 @@ COPY --from=build /target/auth-backend-0.0.1-SNAPSHOT.jar auth-backend.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","auth-backend.jar"]
 
-RUN docker run -p 8080:8080 auth-backend
+
