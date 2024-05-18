@@ -15,6 +15,8 @@
     <description>auth-backend</description>
     <properties>
         <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>
@@ -95,7 +97,33 @@
             <artifactId>springfox-boot-starter</artifactId>
             <version>3.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version> <!-- Or the latest version -->
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
     </dependencies>
+    <profiles>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <!-- Define properties specific to the prod profile -->
+                <environment>production</environment>
+                <!-- Add more properties as needed -->
+            </properties>
+            <build>
+                <!-- Define build configurations specific to the prod profile -->
+                <plugins>
+                    <!-- Example: Configure plugins for production -->
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
     <build>
         <plugins>
