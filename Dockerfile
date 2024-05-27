@@ -14,5 +14,5 @@ COPY --from=build /target/auth-backend-0.0.1-SNAPSHOT.jar auth-backend.jar
 ENV SERVER_PORT=${PORT}
 EXPOSE ${SERVER_PORT}
 ENTRYPOINT ["java","-jar","auth-backend.jar"]
-
+CMD echo "Starting application on port ${PORT}" && java -Dserver.port=${PORT} -jar auth-backend.jar
 
