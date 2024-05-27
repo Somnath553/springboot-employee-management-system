@@ -11,6 +11,8 @@ RUN mvn clean package -Pprod -DskipTests
 FROM openjdk:17-jdk-slim
 COPY --from=build /target/auth-backend-0.0.1-SNAPSHOT.jar auth-backend.jar
 # ENV PORT=8080
+ENV SERVER_PORT=8080
+EXPOSE ${SERVER_PORT}
 ENTRYPOINT ["java","-jar","auth-backend.jar"]
 
 
