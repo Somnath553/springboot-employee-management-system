@@ -4,16 +4,11 @@ import com.example.authbackend.components.JwtHelper;
 import com.example.authbackend.models.LoginRequestModel;
 import com.example.authbackend.models.LoginResponseModel;
 import com.example.authbackend.models.Usermodels;
-import com.example.authbackend.repository.UserRepository;
 import com.example.authbackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.logging.Logger;
